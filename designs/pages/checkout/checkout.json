@@ -1,0 +1,14 @@
+{
+    "appPageId": "fba4c532-0bde-a273-6967-59561faf18b3",
+    "appPageName": "checkout",
+    "componentName": "checkoutComponent",
+    "selectorName": "bh-checkout",
+    "htmlFileName": "checkout.template.html",
+    "tsFileName": "checkout.component.ts",
+    "createDate": "2021-01-26T22:56:14.622Z",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

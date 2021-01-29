@@ -1,0 +1,14 @@
+{
+    "appPageId": "a946470e-11e9-d8d2-ac3f-ae5af1733ba6",
+    "appPageName": "materialComponents",
+    "componentName": "materialcomponentsComponent",
+    "selectorName": "bh-materialcomponents",
+    "htmlFileName": "materialcomponents.template.html",
+    "tsFileName": "materialcomponents.component.ts",
+    "createDate": "2021-01-26T09:18:49.669Z",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

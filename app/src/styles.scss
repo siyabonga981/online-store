@@ -1,0 +1,41 @@
+/*Importing default angular material css theme. */
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "nDefaults.scss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+
+}
+.homeBg{
+    background: url('assets/img/hero.jpg');
+    height: 690px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position-y: top;
+}
+
+.stickyToolbar{
+    position: fixed !important;
+    z-index: 1001;
+}
+
+.cursor{
+    cursor: pointer;
+    color: white;
+}
+
+.fullWidth{
+    width: 100%;
+}
+.welcome{
+    font-size: 25px;
+}
+
+.navIcon{
+    margin-left: 6px;
+    position: relative;
+    top: 3px;
+}

@@ -1,0 +1,90 @@
+<div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+  <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+    <mat-toolbar color="primary" class="stickyToolbar">
+      <div fxLayout="row wrap" fxFlex="100 " fxLayoutAlign="space-between center" [fxShow]="true" [fxHide]="false">
+        <div fxLayout="column wrap" fxFlex="30" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/Icons/favicon.png" width="50px"></div>
+        <div fxLayout="column wrap" fxFlex="30" fxLayoutAlign="center end" [fxShow]="true" [fxHide]="false">
+          <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div>
+                <span>Hi Siyabonga</span>
+                <a routerLink="../checkout">
+                  <mat-icon matBadge="{{ addedItems }}" matBadgeColor="warn" class="cursor navIcon" (click)="redirectCheckout()">shopping_cart
+                  </mat-icon>
+                </a>
+                <span class="cdk-visually-hidden">
+    </span>
+              </div>
+            </div>
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button disableRipple [matMenuTriggerFor]="menu"><span class="material-icons">menu</span></button></div>
+          </div>
+          <mat-menu #menu="matMenu" hasBackdrop="true"><button mat-menu-item> Home </button><button mat-menu-item> About </button><button mat-menu-item> Services </button><button mat-menu-item> Shop </button><button mat-menu-item routerLink="../checkout" [disabled]="false"> Checkout </button></mat-menu>
+        </div>
+      </div>
+    </mat-toolbar>
+  </div>
+</div>
+<div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+  <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+    <div style="z-index: 1000;" class="homeBg">
+      <div fxLayout="column" fxFlex="50" fxLayoutAlign="center center" class="welcome">
+        <h1>Welcome to our shop</h1>
+        <button mat-raised-button color="primary">Shop now</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+  <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+    <div>
+      <h1> Our Best Sellers</h1>
+    </div>
+  </div>
+  <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+    <div fxLayout="row wrap" fxFlex="80" fxLayoutAlign="space-evenly center" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="column wrap" fxFlex="25" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+        <mat-card>
+          <img mat-card-image artImgSrc imgSrc="img/glasses.jpg">
+
+          <mat-card-title align="center">Item One</mat-card-title>
+
+          <mat-card-content align="center">
+            <p>
+              This is a description of item 1</p>
+          </mat-card-content>
+
+          <mat-card-actions align="center"><button mat-raised-button color="primary" (click)="add(); openSnackBar(toast.value, action.value)">Add to Cart</button></mat-card-actions>
+        </mat-card>
+      </div>
+      <div fxLayout="column wrap" fxFlex="25" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+        <mat-card>
+          <img mat-card-image artImgSrc imgSrc="img/bag.jpg">
+
+          <mat-card-title align="center">Item Two</mat-card-title>
+
+          <mat-card-content align="center">
+            <p>
+              This is a description of item 2</p>
+          </mat-card-content>
+
+          <mat-card-actions align="center"><button mat-raised-button color="primary" (click)="add()">Add to Cart</button></mat-card-actions>
+        </mat-card>
+      </div>
+      <div fxLayout="column wrap" fxFlex="25" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+        <mat-card>
+          <img mat-card-image artImgSrc imgSrc="img/glasses.jpg">
+
+          <mat-card-title align="center">Item Three</mat-card-title>
+
+          <mat-card-content align="center">
+            <p>
+              This is a description of item 3</p>
+          </mat-card-content>
+
+          <mat-card-actions align="center"><button mat-raised-button color="primary" (click)="add()">Add to Cart</button></mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+<div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"></div>

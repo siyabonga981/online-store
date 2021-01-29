@@ -1,0 +1,10 @@
+{
+    "classes": [
+        "homeBg",
+        "stickyToolbar",
+        "cursor",
+        "fullWidth",
+        "welcome",
+        "navIcon"
+    ]
+}

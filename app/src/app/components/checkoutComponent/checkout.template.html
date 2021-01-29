@@ -1,0 +1,146 @@
+<div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+  <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+    <mat-toolbar color="primary" class="stickyToolbar">
+      <div fxLayout="row wrap" fxFlex="100 " fxLayoutAlign="space-between center" [fxShow]="true" [fxHide]="false">
+        <div fxLayout="column wrap" fxFlex="30" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false"><img imgSrc="Web/Icons/favicon.png" width="50px"></div>
+        <div fxLayout="column wrap" fxFlex="30" fxLayoutAlign="center end" [fxShow]="true" [fxHide]="false">
+          <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div>
+                <span>Hi Siyabonga</span>
+                <a routerLink="../checkout">
+                  <mat-icon matBadge="{{ addedItems }}" matBadgeColor="warn" class="cursor navIcon" (click)="redirectCheckout()">shopping_cart
+                  </mat-icon>
+                </a>
+                <span class="cdk-visually-hidden">
+    </span>
+              </div>
+            </div>
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><button mat-button disableRipple [matMenuTriggerFor]="menu"><span class="material-icons">menu</span></button></div>
+          </div>
+          <mat-menu #menu="matMenu" hasBackdrop="true"><button mat-menu-item routerLink="../materialComponents"> Home </button><button mat-menu-item> About </button><button mat-menu-item> Services </button><button mat-menu-item> Shop </button><button mat-menu-item routerLink="./checkout"> Checkout </button></mat-menu>
+        </div>
+      </div>
+    </mat-toolbar>
+  </div>
+</div>
+<div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+  <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+    <div>
+      <h1> Checkout Procedure</h1>
+    </div>
+  </div>
+</div>
+<div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+  <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+    <mat-horizontal-stepper [linear]="true">
+      <mat-step label="Personal information" completed="true" optional="false" editable="true" class="fullWidth" hasError="true" errorMessage="Complete all fields">
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+          <form>
+            <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+              <div fxLayout="column wrap" style="margin-right: 20px;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                  <input matInput placeholder="Name" [required]="false">
+
+                </mat-form-field>
+              </div>
+              <div fxLayout="column wrap" style="margin-right:2em;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                  <input matInput placeholder="Surname" [required]="false">
+
+                </mat-form-field>
+              </div>
+            </div>
+            <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+              <div fxLayout="column wrap" style="margin-right: 20px;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                  <input matInput placeholder="Email address" [required]="false">
+
+                </mat-form-field>
+              </div>
+              <div fxLayout="column wrap" style="margin-right:2em;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                  <input matInput placeholder="Cell no." [required]="false">
+
+                </mat-form-field>
+              </div>
+            </div>
+            <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+              <div fxLayout="column wrap" style="margin-right: 20px;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <div>
+                  <button mat-raised-button matStepperNext color="primary">Next</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </mat-step>
+      <mat-step label="Shipping Address" completed="true" optional="false" editable="true">
+        <form>
+          <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div fxLayout="column wrap" style="margin-right: 20px;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <mat-form-field style="width: 100%;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                  <input matInput placeholder="Street Address" [required]="false">
+
+                </mat-form-field>
+              </div>
+              <div fxLayout="column wrap" style="margin-right: 20px;" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false">
+                <mat-form-field style="width: 100%;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                  <input matInput placeholder="Complex/Building" [required]="false">
+
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="row wrap" style="width: 100%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div fxLayout="column wrap" style="margin-right: 20px;" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <mat-form-field style="width: 100%;" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                  <input matInput placeholder="City" [required]="false">
+
+                </mat-form-field>
+              </div>
+              <div fxLayout="column wrap" style="margin-right: 20px;" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+                <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+                  <input matInput placeholder="Postal Code" [required]="false">
+
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="column wrap" style="margin-right: 20px;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+              <div>
+                <button mat-raised-button matStepperPrevious color="warn" style="margin-right: 10px;">Back</button><button mat-raised-button matStepperNext color="primary">Next</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </mat-step>
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+        <div>
+          <h2 mat-dialog-title>Order</h2>
+          <mat-dialog-content class="mat-typography">
+            <h3>Your order has been placed successfully</h3>
+          </mat-dialog-content>
+          <mat-dialog-actions align="end">
+            <button mat-button mat-dialog-close>Cancel</button>
+          </mat-dialog-actions>
+        </div>
+      </div>
+      <mat-step label="Checkout" completed="true" optional="false" editable="true">
+        <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+          <div>
+            <h4>Click on the button below to comfirm your order.</h4>
+          </div>
+        </div>
+        <div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false"><button mat-raised-button color="primary" (click)="showText()">Confirm order</button>
+          <div>
+            <h4 style="color:blue;">{{ text }}</h4>
+          </div>
+        </div>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </div>
+</div>

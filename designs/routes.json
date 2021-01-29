@@ -1,0 +1,22 @@
+{
+    "routes": [
+        {
+            "path": "materialComponents",
+            "component": "materialcomponentsComponent"
+        },
+        {
+            "path": "checkout",
+            "component": "checkoutComponent"
+        },
+        {
+            "path": "''",
+            "redirectTo": "materialComponents",
+            "pathMatch": "full",
+            "default": true
+        },
+        {
+            "path": "**",
+            "component": "PageNotFoundComponent"
+        }
+    ]
+}
